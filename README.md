@@ -8,5 +8,5 @@ Linktree's payment feature is one of the easiest for users, but is not the easie
 ## Other Academic Projects
 
 ### Reducing Regional Hits to the Supply Chain
-An automotive manufacturer provided data from one of their manufacturing plants and asked us to build a model using machine learning algorithms that would predict which factors were the most important in asessing when a hit to the supply chain was likely to occur in the future. After reducing the size of the data set, we built a Random Forest Classifier Model that with 85.9% accuracy could predict when a future supply chain issue was likely to occur.
+An automotive manufacturer provided data from one of their manufacturing plants and asked us to build a model using machine learning algorithms that would predict which factors were the most important in asessing when a hit to the supply chain was likely to occur in the future. After reducing the size of the data set, we built a Random Forest Classifier Model that with 85.9% accuracy could predict when a future supply chain issue was likely to occur.<br>
 <i> Project Data & Code is not included for confidentiality reasons</i>
