@@ -19,7 +19,7 @@ Conducted exploratory data analysis on data from the 2017 Home Mortgage Disclosu
 
 ## Other Projects
 
-### Soundcloud NLP Analysis
+### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Soundcloud%20NLP%20Analysis/SoundcloudAppNLP.ipynb'>Soundcloud NLP Analysis</a>
 Soundcloud's mobile application has undergone many changes in the past year. This project helped to gain a better understanding of user's complaints regarding these changes.
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Ticketing/ticketing.ipynb'>Linktree Payments as a Ticketing Service</a>
 Linktree's payment feature is one of the easiest for users, but is not the easiest for those receiving payments and is not natively designed as a ticketing service. This project was an exercise in data cleaning to make it usable.
