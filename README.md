@@ -4,7 +4,7 @@ Hello! I'm still in the process of uploading many projects, so pardon the dust :
 ## Academic Projects
 
 ### Airport / Airline Choice Analysis and Modeling
-Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.
+Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
 <i> Project Data & Code is not included for confidentiality reasons</i>
 
 ### Reducing Regional Hits to the Supply Chain
