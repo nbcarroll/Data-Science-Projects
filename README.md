@@ -19,6 +19,10 @@ Conducted exploratory data analysis on data from the 2017 Home Mortgage Disclosu
 
 ## Other Projects
 
+### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Soundcloud%20NLP%20Analysis/SoundcloudAppNLP.ipynb'>Rekordbox EDA</a>
+Rekordbox, a program utilized by DJ's to organize individual songs in a database, is rich with metadata. The songs in most DJ's libraries comes from a wide variety of sources with varying standards of completeness in terms of metadata tagging. As such it represents an unclean dataset that's ripe for data cleaning and exploratory data analysis. In this project, I explored my library.
+
+
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Soundcloud%20NLP%20Analysis/SoundcloudAppNLP.ipynb'>Soundcloud NLP Analysis</a>
 Soundcloud's mobile application has undergone many changes in the past year. This project helped to gain a better understanding of user's complaints regarding these changes.
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Ticketing/ticketing.ipynb'>Linktree Payments as a Ticketing Service</a>
