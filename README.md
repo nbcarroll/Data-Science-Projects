@@ -4,7 +4,7 @@ Hello! I'm still in the process of uploading many projects, so pardon the dust :
 ## Academic Projects
 
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Carroll%2C%20Debnath%2C%20Geethasree%20K%20N%2C%20Majumder%20-%20%20Final%20Paper%20(Capstone).pdf'>Capstone: Predicting Elevated Cancer Rates Near Washington State Industrial Facilities</a>
-In this project our group focused on predicting if a county has an elevated cancer rate as indicated by data provided by Toxic Release Inventory on Washington State Industrial Facilities. Our research uses various machine learning models which could be implemented by the government environmental or health departments. We explained which models performed better than others and the reasoning behind that. Out of all models Random Forest, Gradient
+In this project our group focused on predicting if a county has an elevated cancer rate as indicated by data provided by Toxic Release Inventory on Washington State Industrial Facilities. Our research uses various machine learning models which could be implemented by the EPA, as well as non-governmental organizations. We explained which models performed better than others and the reasoning behind that. Out of all models Random Forest, Gradient
 Boosting, Neural Network w/ Grid Search performed best. Additionally, we discussed some potential applications and limitations of our research.
 
 ### Airport / Airline Choice Analysis and Modeling
