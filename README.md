@@ -11,8 +11,7 @@ Boosting, Neural Network w/ Grid Search performed best. Additionally, we discuss
 Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
 <i> Project Data & Code is not included for confidentiality reasons</i>
 
-### <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes
-'>Scalene Works: HR Analytics</a>
+### <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Scalene Works: HR Analytics</a>
 <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes
 '>Tableau Dashboard</a><br>
 <i>Jupyter Notebook presentation showing data processing + model development coming soon.</i>
