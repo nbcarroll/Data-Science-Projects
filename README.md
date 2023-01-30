@@ -12,8 +12,7 @@ Presented written recommendations for supply chain optimization and other substa
 <i> Project Data & Code is not included for confidentiality reasons</i>
 
 ### Scalene Works: HR Analytics
-<a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a><br>
-<i>Jupyter Notebook presentation showing data processing + model development coming soon.</i>
+<a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a> / <i>Jupyter Notebook presentation showing data processing + model development coming soon.</i>
 
 ### Reducing Regional Hits to the Supply Chain
 An automotive manufacturer provided data from one of their manufacturing plants and asked our 4 person group to build a model using machine learning algorithms that would predict which factors were the most important in asessing when a hit to the supply chain was likely to occur in the future. After reducing the size of the data set, we built a Random Forest Classifier Model that with 85.9% accuracy could predict when a future supply chain issue was likely to occur.<br>
