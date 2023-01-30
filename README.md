@@ -12,7 +12,9 @@ Presented written recommendations for supply chain optimization and other substa
 <i> Project Data & Code is not included for confidentiality reasons</i>
 
 ### Scalene Works: HR Analytics
-<a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a> / <i>Jupyter Notebook containing data processing + modeling coming soon.</i>
+Scalene Works People Solutions LLC is a talent acquisition agency. As a business to business (B2B) company in HR, their objective is to create value for clients in the hiring process. There are many challenges to hiring, but the one they have identified as an outstanding, unaddressed problem is the number of candidates who receive job offers, accept them, but then for whatever reason never join the company (the 'renege rate'). Our goal in this assignment was to use a classification algorithm to develop a model that can be used by Scalene Works to predict candidates who are less likely to join after accepting the offer 
+
+<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/3947a4f4cf40149471b568a953d0300a0f9e74bc/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook</a> / <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
 
 ### Reducing Regional Hits to the Supply Chain
 An automotive manufacturer provided data from one of their manufacturing plants and asked our 4 person group to build a model using machine learning algorithms that would predict which factors were the most important in asessing when a hit to the supply chain was likely to occur in the future. After reducing the size of the data set, we built a Random Forest Classifier Model that with 85.9% accuracy could predict when a future supply chain issue was likely to occur.<br>
