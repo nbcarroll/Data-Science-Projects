@@ -7,14 +7,14 @@ Hello! I'm still in the process of uploading many projects, so pardon the dust :
 In this project our group focused on predicting if a county has an elevated cancer rate as indicated by data provided by Toxic Release Inventory on Washington State Industrial Facilities. Our research uses various machine learning models which could be implemented by the EPA, as well as non-governmental organizations. We explained which models performed better than others and the reasoning behind that. Out of all models Random Forest, Gradient
 Boosting, Neural Network w/ Grid Search performed best. Additionally, we discussed some potential applications and limitations of our research.
 
-### Airport / Airline Choice Analysis and Modeling
-Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
-<i> Project Data & Code is not included for confidentiality reasons</i>
-
 ### Scalene Works: HR Analytics
 Scalene Works People Solutions LLC is a talent acquisition agency. As a business to business (B2B) company in HR, their objective is to create value for clients in the hiring process. There are many challenges to hiring, but the one they have identified as an outstanding, unaddressed problem is the number of candidates who receive job offers, accept them, but then for whatever reason never join the company (the 'renege rate'). Our goal in this assignment was to use a classification algorithm to develop a model that can be used by Scalene Works to predict candidates who are less likely to join after accepting the offer 
 
 <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/3947a4f4cf40149471b568a953d0300a0f9e74bc/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook</a> / <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
+
+### Airport / Airline Choice Analysis and Modeling
+Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
+<i> Project Data & Code is not included for confidentiality reasons</i>
 
 ### Reducing Regional Hits to the Supply Chain
 An automotive manufacturer provided data from one of their manufacturing plants and asked our 4 person group to build a model using machine learning algorithms that would predict which factors were the most important in asessing when a hit to the supply chain was likely to occur in the future. After reducing the size of the data set, we built a Random Forest Classifier Model that with 85.9% accuracy could predict when a future supply chain issue was likely to occur.<br>
