@@ -8,7 +8,7 @@ In this project our group focused on predicting if a county has an elevated canc
 Boosting, Neural Network w/ Grid Search performed best. Additionally, we discussed some potential applications and limitations of our research.
 
 ### Scalene Works: HR Analytics
-<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/3947a4f4cf40149471b568a953d0300a0f9e74bc/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook</a> / <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
+<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/3947a4f4cf40149471b568a953d0300a0f9e74bc/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook (must run notebook in IDE to generate Plotly Visulations) </a> / <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
 
 Scalene Works People Solutions LLC is a talent acquisition agency. As a business to business (B2B) company in HR, their objective is to create value for clients in the hiring process. There are many challenges to hiring, but the one they have identified as an outstanding, unaddressed problem is the number of candidates who receive job offers, accept them, but then for whatever reason never join the company (the 'renege rate'). Our goal in this assignment was to use a classification algorithm to develop a model that can be used by Scalene Works to predict candidates who are less likely to join after accepting the offer 
 
