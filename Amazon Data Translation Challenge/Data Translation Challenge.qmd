@@ -1,0 +1,233 @@
+---
+title: "Data Translation Challenge"
+author: "Nick Carroll"
+format: html
+self-contained: true
+editor: visual
+execute:
+  echo: false
+  warning: false
+---
+
+```{r}
+library(dplyr)
+library(tidyverse)
+library(ggpubr)
+library(ggforce)
+library(ggalt)
+library(vtable)
+library(stringr)
+library(gghighlight)
+
+
+# Loading Zip Info
+zip_info <- read_csv('zip_info.csv', show_col_types = FALSE)
+#vtable(zip_info, lush = TRUE)
+
+# Loading Sales
+load('sales_data.Rdata')
+#vtable(sales, lush = TRUE, factor.limit = 9, char.values = TRUE)
+
+# Convert DataFrame Columns to Numeric Type using as.numeric()
+sales$Quantity <- as.numeric(as.character(sales$Quantity))
+sales$PriceEach <- as.numeric(as.character(sales$PriceEach))
+sales$ZIP <- as.numeric(as.character(sales$ZIP)) # Need to Convert for Merge... could probably do this one the other way around though aka zip to char
+
+# Merging Datasets
+sales <- sales %>%
+  left_join(zip_info, by = 'ZIP')
+
+# CREATING 'PRODUCT CATEGORY' GROUPINGS
+sales <- sales %>% 
+    mutate(ProductCategory = case_when(
+          str_detect(Product, "Laptop") ~ "Laptop",
+          str_detect(Product, "Phone") ~ "Phone", # Adjust since headphones
+          str_detect(Product, "TV") ~ "Displays", 
+          str_detect(Product, "Monitor") ~ "Displays", 
+          str_detect(Product, "Machine") ~ "HH Appliances",
+          str_detect(Product, "Dryer") ~ "HH Appliances",
+          str_detect(Product, "Head") ~ "Headphones",
+          str_detect(Product, "Cable") ~ "Cables",
+          str_detect(Product, "Batte") ~ "Batteries",
+          TRUE ~ 'Other'))
+
+# New Column for City&State, Since Two Portlands (Oregon + Maine)
+sales$CityAndState <- paste(sales$City,sales$State,sep=", ")
+
+sales <- sales %>%
+  mutate(SaleRevenue = Quantity * PriceEach) %>%
+  mutate(SaleRevenuePerCapita = sum(SaleRevenue) / TotalPopulation) # Is this working?
+
+# Extract Month
+sales$Month <- format(sales$Date, "%m")
+
+sales <- sales %>% 
+    mutate(Quarter = case_when(
+          str_detect(Month, "01") ~ "Q1",
+          str_detect(Month, "02") ~ "Q1",
+          str_detect(Month, "03") ~ "Q1",
+          str_detect(Month, "04") ~ "Q2",
+          str_detect(Month, "05") ~ "Q2",
+          str_detect(Month, "06") ~ "Q2",
+          str_detect(Month, "07") ~ "Q3",
+          str_detect(Month, "08") ~ "Q3",
+          str_detect(Month, "09") ~ "Q3",
+          str_detect(Month, "10") ~ "Q4",
+          str_detect(Month, "10") ~ "Q4",
+          TRUE ~ 'Q4'))
+
+HH_App_Only <- sales %>%
+                        filter(ProductCategory == 'HH Appliances')
+
+# Creating variables for weekday
+sales$weekday <- weekdays(sales$Date)
+
+# Converting sales to Month Abbreviation
+sales$Month[sales$Month == "01"] <- "Jan"
+sales$Month[sales$Month == "02"] <- "Feb"
+sales$Month[sales$Month == "03"] <- "March"
+sales$Month[sales$Month == "04"] <- "April"
+sales$Month[sales$Month == "05"] <- "May"
+sales$Month[sales$Month == "06"] <- "June"
+sales$Month[sales$Month == "07"] <- "July"
+sales$Month[sales$Month == "08"] <- "Aug"
+sales$Month[sales$Month == "09"] <- "Sep"
+sales$Month[sales$Month == "10"] <- "Oct"
+sales$Month[sales$Month == "11"] <- "Nov"
+sales$Month[sales$Month == "12"] <- "Dec"
+```
+
+Dear Amazon Business Intelligence Team,
+
+Amazon is an international company and intuitively it would only make sense that a strong positive correlation would exist between the population and revenue of customers in a given city.
+
+Interestingly, this does not appear to be the case...
+
+```{r}
+test_2 <- sales %>%
+  group_by(CityAndState) %>%
+  mutate(Total_SaleRevenue = sum(SaleRevenue),SalesPerCapita = Total_SaleRevenue / TotalPopulation) %>%
+ arrange(-SalesPerCapita)
+
+ggplot(test_2, aes(x = TotalPopulation, y = Total_SaleRevenue)) +
+geom_point() +
+scale_y_continuous(labels=scales::dollar_format()) +
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+  labs(x = "Total Population",
+       y = "Total Revenue",
+       title='Scatterplot of Total Population vs.Total Revenue',
+       subtitle = "Individual Points Represent Different Cities") + theme_minimal()
+```
+
+Only a slight positive correlation is found, suggesting that on average some cities are more dedicated Amazon customers than others. The question then becomes, so what cities are more dedicated Amazon customers?
+
+```{r}
+barData <- sales %>%
+  group_by(CityAndState, TotalPopulation, PCIncome) %>%
+  summarize(Total_Sales = sum(SaleRevenue),
+            Sales_Per_Capita = Total_Sales / mean(TotalPopulation))
+
+ggplot(barData, aes(x = CityAndState, y = Sales_Per_Capita)) +
+  geom_col() +
+  scale_y_continuous(labels=scales::dollar_format()) +
+  labs(x = "",
+       y = "Revenue Per Capita",
+       title='City Comparison of Revenue Per Capita',
+       subtitle = "Per Capita is based on Total Population") +
+  gghighlight(max(Sales_Per_Capita) > 200) +
+  theme_minimal() +
+  theme(axis.text.x=element_text(
+                                 #size=8,
+                                 angle=90
+                                 #hjust=0,
+                                 #vjust=-2
+                                 ))
+
+```
+
+As we can see, customers in San Francisco spend more per-capita than any other city, followed by Seattle and then New York.
+
+It is common knowledge that Seattle & San Francisco are tech-centered cities where Amazon locally has a large presence. Much of these cities already uses Amazon for many of their needs and it's difficult to assess where the ceiling exists for additional market-share. As an international company, Amazon should be looking for new markets where there is much to gain. As such a good question to ask is, are there other cities where consumers have a lot of spending power that Amazon could gain a larger market-share in?
+
+```{r}
+
+ggplot(barData, aes(x = Sales_Per_Capita, y = PCIncome,
+                    #color = CityAndState,
+                    label = CityAndState)) +
+  geom_point() +
+  geom_text(vjust=1) +
+  scale_y_continuous(labels=scales::dollar_format()) +
+  scale_x_continuous(labels=scales::dollar_format()) +
+  theme(legend.position="none") +
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+ labs(x = "Revenue Per Capita",
+      y = "Annual per-capita (i.e. per-person) income",
+      title='Per Capita Comparison of Total Revenue vs. Income') +
+  #      subtitle = "Per Capita is based on Total Population")
+  gghighlight(max(PCIncome) > 99000) + theme_minimal()
+
+  # gghighlight(CityAndState %in% c('Atlanta, GA'))
+              #unhighlighted_params = aes(size=.1), 
+              #label_params=list(direction='y',nudge_x=10))
+```
+
+As a city with a much higher annual per-capita Income relative to revenue per capita, Atlanta is a city where Amazon should focus much of it's marketing efforts. Population-wise, it's also the 8th-most populous Metro area in the United States ([source](https://www.11alive.com/article/money/business/metro-atlantas-population-surges/85-f30e84e8-822f-427d-b51f-28e4921b6cce)).
+
+The Median age of first time home-buyers in the United States is 33 years old ([source](https://www.thebalancemoney.com/what-is-the-average-age-of-a-first-time-homebuyer-5324070#:~:text=The%20average%20age%20of%20first,age%20had%20increased%20to%2033.)). With the purchase of a home often comes with the purchasing of new appliances and other household essentials, which Amazon is fully stocked with. Preliminary research into our data found that in the 666 cases a customer purchased a dryer, 97% of the time they also purchased a washer as well. If a customer purchases a washer and dryer together, the total revenue is \$1,200. The only item that sells for more are Macbook Pro Laptops. As a city that's large and growing, focusing on advertising these items in Atlanta can act as a great gateway for Amazon to build consumer loyalty there.
+
+Based on this, let's look at sales trends of Household appliances sales in Atlanta, and compare this with sales data nationally.
+
+```{r}
+HH_Atlanta_Only <- sales %>%
+                        filter(ProductCategory == 'HH Appliances') %>%
+                        filter(City == 'Atlanta')
+
+Monthly_HH_Atlanta_Only <- HH_Atlanta_Only %>%
+                group_by(month = lubridate::floor_date(Date, 'month')) %>%
+                summarize(sum = sum(SaleRevenue))
+
+
+p1 <- ggplot(Monthly_HH_Atlanta_Only, aes(x=month, y=sum)) +
+  geom_line(color="steelblue") + 
+  geom_point() +
+  scale_y_continuous(labels=scales::dollar_format(),
+                     limits=c(2000, 12000)) +
+  scale_x_date(
+              #date_breaks="1 month",
+               date_labels="%b",
+               limits = as.Date(c("2019-01-01","2019-12-01"))) +
+  labs(x = "Month",
+       y = "Total Revenue",
+       title='Household Appliances in Atlanta',
+       caption = "Note: June & July are 2nd/3rd Highest") +
+  theme_minimal() +
+  theme(plot.caption = element_text(hjust = 0.25))  # Caption customization
+
+Monthly_Only <- sales %>%
+                group_by(month = lubridate::floor_date(Date, 'month')) %>%
+                summarize(sum = sum(SaleRevenue))
+
+p2 <- ggplot(Monthly_Only, aes(x=month, y=sum)) +
+  geom_line(color="steelblue") + 
+  geom_point() +
+  scale_y_continuous(labels=scales::dollar_format(),
+                     limits=c(1500000, 5000000)) +
+  scale_x_date(
+               #date_breaks="1 month",
+               date_labels="%b",
+    limits = as.Date(c("2019-01-01","2019-12-01"))) +
+  labs(x = "Month",
+       y = "Total Revenue",
+       title='All Products in All Cities') + theme_minimal()
+
+library(patchwork)
+# Named and saved these earlier
+(p1 | p2) +  plot_annotation(title = 'Sales Revenue By Month Comparison',
+                             theme = theme(plot.title = element_text(size = 18)))
+```
+
+While it makes sense that December in both line plots represents the top sales month, it is in the differences in the shape and relative order of these two visualizations that a potential opportunity awaits. The second and third highest months for revenue of Household Appliances in Atlanta are June & July.
+
+During this period, where consumers aren't inundated with advertisements for holiday sales, is where we should focus our marketing efforts in Atlanta.
+
+It is here that a huge opportunity for growth for Amazon in Atlanta awaits.
