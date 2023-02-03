@@ -1,4 +1,4 @@
-# Data Science Projects
+# Projects
 
 ## Academic Projects
 
