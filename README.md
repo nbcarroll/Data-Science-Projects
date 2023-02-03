@@ -11,7 +11,7 @@ Our group's focus in this project was to predict if a county had a high cancer r
 Scalene Works People Solutions LLC is a talent acquisition agency. As a business to business (B2B) company in HR, their objective is to create value for clients in the hiring process. There are many challenges to hiring, but the one they have identified as an outstanding, unaddressed problem is the number of candidates who receive job offers, accept them, but then for whatever reason never join the company (the 'renege rate'). In this assignment I built a Random Forest Classifier that can be used by Scalene Works to predict candidates who are less likely to join after accepting the offer. 
 
 ### <a href='https://github.com/nbcarroll/Projects/blob/main/CustomerSegmentation/MarketCustomerAnalysis.ipynb'>Customer Segmentation | Clustering</a>
-By leveraging existing customer demographic and purchase data, we can identify two groups and their characteristics.
+By leveraging existing customer demographic and purchase data, I identified two groups and the characteristics which define them so a hypothetical marketing team could better sereve each customer base.
 
 ### Airport / Airline Choice Analysis and Modeling
 Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
