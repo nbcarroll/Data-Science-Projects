@@ -27,7 +27,7 @@ Built logarithmic models utilizing R from individual level data from the 2019 Am
 ### Mortgage Lending Decisions Analysis and Modeling
 Conducted exploratory data analysis on data from the 2017 Home Mortgage Disclosure Act provided by the Consumer Financial Protection Bureau for the state of Delaware and built logit and probit models utilizing maximum likelihood estimation in R to gain a better understanding of the probability of loan approval across racial and ethnic groups.
 
-## Other Projects
+## Non-Academic Projects
 
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Rekordbox%20EDA/RekordboxEDA.ipynb'>Rekordbox EDA</a>
 Rekordbox, a program utilized by DJ's to organize individual songs in a database, is rich with metadata. The songs in most DJ's libraries comes from a wide variety of sources with varying standards of completeness in terms of metadata tagging. As such it represents an unclean dataset that's ripe for data cleaning and exploratory data analysis. In this project, I explored my library.
@@ -37,3 +37,10 @@ Rekordbox, a program utilized by DJ's to organize individual songs in a database
 Soundcloud's mobile application has undergone many changes in the past year. This project helped to gain a better understanding of user's complaints regarding these changes.
 ### <a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Ticketing/ticketing.ipynb'>Linktree Payments as a Ticketing Service</a>
 Linktree's payment feature is one of the easiest for users, but is not the easiest for those receiving payments and is not natively designed as a ticketing service. This project was an exercise in data cleaning to make it usable.
+
+## Guided Projects
+
+### <a href='https://public.tableau.com/views/TheStartUpQuadrantAdv_MasterTableauinDataScienceCourse/TheStartupQuadrant?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'>The StartUp Dashboard</a>
+
+
+
