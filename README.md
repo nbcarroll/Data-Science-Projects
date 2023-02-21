@@ -13,7 +13,7 @@ Scalene Works People Solutions LLC is a talent acquisition agency. As a business
 ### <a href='https://github.com/nbcarroll/Projects/blob/main/CustomerSegmentation/MarketCustomerAnalysis.ipynb'>Customer Segmentation | Clustering</a>
 By leveraging existing customer demographic and purchase data, I identified two groups and the characteristics which define them so a hypothetical marketing team could better serve each customer base.
 
-## <a href='https://github.com/nbcarroll/Projects/tree/main/Amazon%20Data%20Translation%20Challenge'>Amazon Business Intelligence | Data Translation Assignment</a>
+### <a href='https://github.com/nbcarroll/Projects/tree/main/Amazon%20Data%20Translation%20Challenge'>Amazon Business Intelligence | Data Translation Assignment</a>
 For my Data Visualization course assignment, we were given a hypothetical dataset of Amazon technology product sales occurring over several months in 2019, in a select number of urban ZIP codes. The task was to explore the dataset to find an interesting story to tell. After analyzing the data, I was able to identify the cities, product types, and times of year that the company should focus its marketing efforts on to maximize impact in a written report address to a hypothetical Amazon Business Intelligence team.
 
 ### Airport / Airline Choice Analysis and Modeling
