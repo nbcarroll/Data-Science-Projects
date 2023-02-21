@@ -13,6 +13,9 @@ Scalene Works People Solutions LLC is a talent acquisition agency. As a business
 ### <a href='https://github.com/nbcarroll/Projects/blob/main/CustomerSegmentation/MarketCustomerAnalysis.ipynb'>Customer Segmentation | Clustering</a>
 By leveraging existing customer demographic and purchase data, I identified two groups and the characteristics which define them so a hypothetical marketing team could better serve each customer base.
 
+## <a href='https://github.com/nbcarroll/Projects/tree/main/Amazon%20Data%20Translation%20Challenge'>Amazon Business Intelligence | Data Translation Assignment</a>
+For my Data Visualization course assignment, we were given a hypothetical dataset of Amazon technology product sales occurring over several months in 2019, in a select number of urban ZIP codes. The task was to explore the dataset to find an interesting story to tell. After analyzing the data, I was able to identify the cities, product types, and times of year that the company should focus its marketing efforts on to maximize impact in a written report address to a hypothetical Amazon Business Intelligence team.
+
 ### Airport / Airline Choice Analysis and Modeling
 Presented written recommendations for supply chain optimization and other substantive business decisions based on quantitative analysis for airline clients operating out of two airports in Asia. Utilizing Python, Numpy, Pandas and Sci-Kit Learn, we conducted exploratory data analysis, data preprocessing and data mining, then developed logistic regression and decision tree models from passenger demographic and flight-specific data to gain a deeper understanding of the most relevant features driving a passenger’s choice of airport and airline.<br>
 <i> Project Data & Code is not included for confidentiality reasons</i>
