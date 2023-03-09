@@ -8,7 +8,7 @@
 Our group's focus in this project was to predict if a county had a high cancer rate based on data from Washington State Industrial Facilities' Toxic Release Inventory.  We determined which models performed best, with Random Forest, Gradient Boosting, and Neural Network with Grid Search being the top performers. Lastly, we explored potential use cases by the EPA, as well as other non-governmental organizations and discussed the limitations of our findings.
 
 ### Scalene Works: HR Analytics | Classification
-<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook</a> / <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
+<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Scalene%20Works/scalene_works.ipynb'>Jupyter Notebook</a> | <a href='https://public.tableau.com/app/profile/nbcarr0ll/viz/ScaleneWorksHrAnalytics/Dashboard1?publish=yes'>Tableau Dashboard</a>
 
 Scalene Works People Solutions LLC is a talent acquisition agency. As a business to business (B2B) company in HR, their objective is to create value for clients in the hiring process. There are many challenges to hiring, but the one they have identified as an outstanding, unaddressed problem is the number of candidates who receive job offers, accept them, but then for whatever reason never join the company (the 'renege rate'). In this assignment I built a Random Forest Classifier that can be used by Scalene Works to predict candidates who are less likely to join after accepting the offer. 
 
