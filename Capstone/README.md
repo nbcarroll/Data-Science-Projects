@@ -1,4 +1,5 @@
 # Predicting Elevated Cancer Rates Near Washington State Industrial Facilities
+<a href='https://github.com/nbcarroll/Data-Science-Projects/blob/main/Carroll%2C%20Debnath%2C%20Geethasree%20K%20N%2C%20Majumder%20-%20%20Final%20Paper%20(Capstone).pdf'>Written Report</a> | <a href="https://github.com/nbcarroll/Projects/blob/main/Final%20Presentation.pptx">Powerpoint Presentation</a>
 
 <img src='https://github.com/nbcarroll/Projects/blob/main/Capstone/factory.png'>
 
