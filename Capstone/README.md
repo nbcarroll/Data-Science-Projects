@@ -1,3 +1,5 @@
+<img src='https://github.com/nbcarroll/Projects/blob/main/Capstone/factory.png'>
+
 ## Problem Statement
 
 Since 1990, global cancer prevalence has risen from 54% to 64% ([Our World in Data](https://ourworldindata.org/cancer#:~:text=Global%20cancer%20prevalence%20has%20risen,(largely%20due%20to%20smoking).)). Exposure to certain chemicals in the environment, at home, and at work may contribute to an individual's risk of developing cancer. The Toxic Release Inventory (TRI) Program are annual reports administered by the United States Environmental Protection Agency that track facilities that release toxic-chemicals which may pose a threat to the environment and human health.
