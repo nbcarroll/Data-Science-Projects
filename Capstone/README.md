@@ -11,3 +11,5 @@ Our goal is to create a model capable of predicting whether a county has an elev
 ## Results
 
 After testing many different machine learning algorithms, we developed a model utilizing the Gradient Boosting alogirthm capable of predicting if a county has an elevated cancer rate with 95% accuracy.
+
+<img src='https://github.com/nbcarroll/Projects/blob/main/Capstone/ModelPerformance.jpg'>
