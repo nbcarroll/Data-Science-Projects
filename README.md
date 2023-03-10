@@ -2,7 +2,7 @@
 
 ## Academic Projects
 
-### Capstone: <a href='https://github.com/nbcarroll/Projects/blob/main/Capstone/README.md'>Predicting Elevated Cancer Rates Near Washington State Industrial Facilities</a>
+### <a href='https://github.com/nbcarroll/Projects/blob/main/Capstone/README.md'>Predicting Elevated Cancer Rates Near Washington State Industrial Facilities (Seattle University Capstone)</a>
 
 Our group's focus in this project was to predict if a county had a high cancer rate based on data from Washington State Industrial Facilities' Toxic Release Inventory.  We determined which models performed best, with Random Forest, Gradient Boosting, and Neural Network with Grid Search being the top performers. Lastly, we explored potential use cases by the EPA, as well as other non-governmental organizations and discussed the limitations of our findings.
 
